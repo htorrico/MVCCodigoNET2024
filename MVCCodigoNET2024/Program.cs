@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using MVCCodigoNET2024.Controllers;
+using MVCCodigoNET2024.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+builder.Services.AddScoped<SchoolContext>();
+
+
 
 var app = builder.Build();
 
